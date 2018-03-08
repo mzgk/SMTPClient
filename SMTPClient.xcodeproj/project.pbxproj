@@ -70,13 +70,13 @@
 		32BB68212050FA6E00ADA8B4 /* SMTPClient */ = {
 			isa = PBXGroup;
 			children = (
+				3299203D2051052F00226754 /* SMTPClient-Bridging-Header.h */,
+				32BB682E2050FA6E00ADA8B4 /* Info.plist */,
 				32BB68222050FA6E00ADA8B4 /* AppDelegate.swift */,
 				32BB68242050FA6E00ADA8B4 /* ViewController.swift */,
-				32BB68262050FA6E00ADA8B4 /* Main.storyboard */,
 				32BB68292050FA6E00ADA8B4 /* Assets.xcassets */,
 				32BB682B2050FA6E00ADA8B4 /* LaunchScreen.storyboard */,
-				32BB682E2050FA6E00ADA8B4 /* Info.plist */,
-				3299203D2051052F00226754 /* SMTPClient-Bridging-Header.h */,
+				32BB68262050FA6E00ADA8B4 /* Main.storyboard */,
 			);
 			path = SMTPClient;
 			sourceTree = "<group>";
