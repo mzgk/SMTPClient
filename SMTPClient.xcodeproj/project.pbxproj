@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FC1B120E1958A0E1214F406 /* Pods_SMTPClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ED9B36030E879D1D317BC3 /* Pods_SMTPClient.framework */; };
 		32BB68232050FA6E00ADA8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BB68222050FA6E00ADA8B4 /* AppDelegate.swift */; };
 		32BB68252050FA6E00ADA8B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BB68242050FA6E00ADA8B4 /* ViewController.swift */; };
 		32BB68282050FA6E00ADA8B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BB68262050FA6E00ADA8B4 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		32BB68292050FA6E00ADA8B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32BB682C2050FA6E00ADA8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32BB682E2050FA6E00ADA8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408000C39E9E344B11C18790 /* Pods-SMTPClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMTPClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMTPClient/Pods-SMTPClient.debug.xcconfig"; sourceTree = "<group>"; };
+		6BE15F02FE4C5F2EC9C3D39C /* Pods-SMTPClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMTPClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMTPClient/Pods-SMTPClient.release.xcconfig"; sourceTree = "<group>"; };
+		79ED9B36030E879D1D317BC3 /* Pods_SMTPClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMTPClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FC1B120E1958A0E1214F406 /* Pods_SMTPClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DD8FDAF8B776A930F3508F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79ED9B36030E879D1D317BC3 /* Pods_SMTPClient.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		32BB68162050FA6E00ADA8B4 = {
 			isa = PBXGroup;
 			children = (
 				32BB68212050FA6E00ADA8B4 /* SMTPClient */,
 				32BB68202050FA6E00ADA8B4 /* Products */,
+				36DF9F7820AE4ED72B7C2443 /* Pods */,
+				0DD8FDAF8B776A930F3508F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = SMTPClient;
 			sourceTree = "<group>";
 		};
+		36DF9F7820AE4ED72B7C2443 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				408000C39E9E344B11C18790 /* Pods-SMTPClient.debug.xcconfig */,
+				6BE15F02FE4C5F2EC9C3D39C /* Pods-SMTPClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32BB68312050FA6E00ADA8B4 /* Build configuration list for PBXNativeTarget "SMTPClient" */;
 			buildPhases = (
+				4E95694A710B58770FD502CD /* [CP] Check Pods Manifest.lock */,
 				32BB681B2050FA6E00ADA8B4 /* Sources */,
 				32BB681C2050FA6E00ADA8B4 /* Frameworks */,
 				32BB681D2050FA6E00ADA8B4 /* Resources */,
+				763E255589DD3F96B38A67BF /* [CP] Embed Pods Frameworks */,
+				A41AAB797C4FDB8FF5DF80AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E95694A710B58770FD502CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SMTPClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		763E255589DD3F96B38A67BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMTPClient/Pods-SMTPClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A41AAB797C4FDB8FF5DF80AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SMTPClient/Pods-SMTPClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		32BB681B2050FA6E00ADA8B4 /* Sources */ = {
@@ -272,6 +350,7 @@
 		};
 		32BB68322050FA6E00ADA8B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 408000C39E9E344B11C18790 /* Pods-SMTPClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +366,7 @@
 		};
 		32BB68332050FA6E00ADA8B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BE15F02FE4C5F2EC9C3D39C /* Pods-SMTPClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
